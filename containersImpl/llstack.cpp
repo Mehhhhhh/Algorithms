@@ -2,23 +2,28 @@
 
 namespace Containers{
 
-llstack::llstack(){
+template<class T>
+llstack<T>::llstack(){
 	first = nullptr;
 	N = 0;
 }
 
-bool llstack::isEmpty() { return first == nullptr; }
+template<class T>
+bool llstack<T>::isEmpty() { return first == nullptr; }
 
-int llstack::size() { return N; } 
+template<class T>
+int llstack<T>::size() { return N; } 
 
-void llstack::push(T& item){
+template<class T>
+void llstack<T>::push(T& item){
 	Node* new_first = new Node(item);
 	Node* old_first = first;
 	first = new_first;
 	first->next = old_first;
 }
 
-T& llstack::pop(){
+template<class T>
+T& llstack<T>::pop(){
 	T& item = first->item;
 	first=first->next;
 	N --;

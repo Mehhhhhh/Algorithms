@@ -5,7 +5,7 @@ namespace Containers
 		public:
 			llstack();
 			void push(T& t);
-			bool isEmpt();
+			bool isEmpty();
 			int size();
 			T& pop();
 		private:
@@ -28,5 +28,5 @@ namespace Containers
 			Node* first;
 			//number of items
 			int N;
-	}
-};
+	};
+}
