@@ -10,11 +10,9 @@ all: $(BDIR)/llstackTestClient
 $(BDIR)/llstackTestClient: $(ODIR)/main.o $(ODIR)/llstack.o
 	$(CC) $(ODIR)/main.o $(ODIR)/llstack.o -o $(BDIR)/llstackTestClient
 
-$(ODIR)/main.o: $(SDIR)/main.cpp
-	$(CC) $(CFLAGS) $(SDIR)/main.cpp
 
-$(ODIR)/llstack.o: $(SDIR)/llstack.cpp
-	$(CC) $(CFLAGS) $(SDIR)/llstack.cpp 
+$(ODIR)/%.o: $(SDIR)/%.cpp
+	$(CC) $(CFLAGS) $< -o $@ 
 
 clean: 
-	rm -rf *o llstackTestClient
+	rm -rf **/*o llstackTestClient
