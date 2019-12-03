@@ -2,7 +2,6 @@
 #include <iostream>
 
 int main(int argc, char* argv[]){
-	using namespace Containers;
 	llstack<int>* stack = new llstack<int>();
 	for(int i = 0 ; i < 10 ; ++i){
 		stack->push(i);

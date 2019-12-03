@@ -1,32 +1,29 @@
-namespace Containers
-{
-	template <class T>
-	class llstack{
-		public:
-			llstack();
-			void push(T& t);
-			bool isEmpty();
-			int size();
-			T& pop();
-		private:
-			class Node {
-			    public:
-				Node(T& item){
-					this.item = item;
-					next = nullptr;
-				};
-				Node(){
-					T t = T();
-					item = t;
-					next = nullptr;
-				};
-			    private:
-				T item;
-				Node* next;
-			};
-			// top of the stack
-			Node* first;
-			//number of items
-			int N;
-	};
-}
+#ifndef LLSTACK_HPP
+#define LLSTACK_HPP
+
+template <class T> class llstack{
+	public:
+		llstack();
+		void push(T& t);
+		bool isEmpty();
+		int size();
+		T& pop();
+		~llstack();
+	private:
+		class Node {
+		    public:
+			Node (const T& elem) : item(elem), next(nullptr){ }
+			T item;
+			Node* next;
+		};
+		// top of the stack
+		Node* first;
+		//number of items
+		int N;
+};
+
+#include "template/llstack.tpp"
+
+
+
+#endif
