@@ -14,4 +14,4 @@ $(ODIR)/%.o: $(SDIR)/%.cpp
 	$(CC) $(CFLAGS) $< -o $@ 
 
 clean: 
-	rm -rf **/*o llstackTestClient
+	rm -rf **/*o */llstackTestClient
