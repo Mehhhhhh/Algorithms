@@ -17,17 +17,17 @@ void arraystack<T>::resize(int newsize){
 }
 
 template<class T>
-int arraystack<T>::size(){
+int arraystack<T>::size() const{
 	return N;
 }
 
 template<class T>
-bool arraystack<T>::isEmpty(){
+bool arraystack<T>::isEmpty() const{
 	return N==0;
 }
 
 template<class T>
-void arraystack<T>::push(T& item){
+void arraystack<T>::push(const T& item){
 	if(N==arraySize) resize(2*arraySize);
 	arr[N++] = item;
 }
@@ -44,10 +44,3 @@ arraystack<T>::~arraystack(){
 	delete[] arr;
 	arr = nullptr;
 }
-
-template<class T>
-int arraystack<T>::cap(){
-	return arraySize;
-}
-
-

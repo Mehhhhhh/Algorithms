@@ -6,13 +6,11 @@
 template<class T> class arraystack{
 	public:
 		arraystack();
-		void push(T& t);
-                bool isEmpty();
-                int size();
+		void push(const T& t);
+                bool isEmpty() const;
+                int size() const;
                 T pop();
 		~arraystack();
-		int cap();
-		void pp();
 	private:
 		int N;
 		int arraySize;

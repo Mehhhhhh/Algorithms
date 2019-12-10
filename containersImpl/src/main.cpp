@@ -17,8 +17,6 @@ void test_arraystack(){
         for(int i = 0 ; i < 10 ; ++i){
 		std::cout << "pushing " << i << " in stack"<< std::endl;
                 stack->push(i);
-		std::cout << "capacity is " << stack->cap() << std::endl;
-		std::cout << "size is " << stack->size() << std::endl;
         }
         while(!stack->isEmpty()){
 		std::cout << "popping" << std::endl;
