@@ -9,9 +9,10 @@ template<class T> class arraystack{
 		void push(T& t);
                 bool isEmpty();
                 int size();
-                T& pop();
+                T pop();
 		~arraystack();
 		int cap();
+		void pp();
 	private:
 		int N;
 		int arraySize;

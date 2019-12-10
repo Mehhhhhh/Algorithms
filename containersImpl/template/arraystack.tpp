@@ -33,8 +33,8 @@ void arraystack<T>::push(T& item){
 }
 
 template<class T>
-T& arraystack<T>::pop(){
-	T& item = arr[--N];
+T arraystack<T>::pop(){
+	T item = arr[--N];
 	if(N > 0 && N == arraySize/4) resize(arraySize/2);
 	return item;
 }
@@ -49,3 +49,5 @@ template<class T>
 int arraystack<T>::cap(){
 	return arraySize;
 }
+
+

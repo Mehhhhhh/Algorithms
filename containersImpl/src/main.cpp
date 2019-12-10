@@ -21,10 +21,8 @@ void test_arraystack(){
 		std::cout << "size is " << stack->size() << std::endl;
         }
         while(!stack->isEmpty()){
-		std::cout << "poping stack"<< std::endl;
+		std::cout << "popping" << std::endl;
                 std::cout << stack->pop() << std::endl;
-		std::cout << "capacity is " << stack->cap() << std::endl;
-                std::cout << "size is " << stack->size() << std::endl;
         }
 
 }
