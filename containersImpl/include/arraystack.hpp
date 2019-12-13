@@ -6,7 +6,7 @@
 template<class T> class arraystack{
 	public:
 		arraystack();
-		void push(const T& t);
+		void push(T& t);
                 bool isEmpty() const;
                 int size() const;
                 T pop();

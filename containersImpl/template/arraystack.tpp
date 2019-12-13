@@ -27,7 +27,7 @@ bool arraystack<T>::isEmpty() const{
 }
 
 template<class T>
-void arraystack<T>::push(const T& item){
+void arraystack<T>::push(T& item){
 	if(N==arraySize) resize(2*arraySize);
 	arr[N++] = item;
 }
