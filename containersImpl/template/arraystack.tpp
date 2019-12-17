@@ -1,3 +1,4 @@
+#include <iostream>
 template<class T>
 arraystack<T>::arraystack(){
 	N = 0;
@@ -7,8 +8,9 @@ arraystack<T>::arraystack(){
 
 template<class T>
 void arraystack<T>::resize(int newsize){
-        T* temp = new T[newsize];
-	for(int i = 0; i < (arraySize>newsize ? arraySize : newsize) ; ++i){
+	std::cout << "resizing from " << arraySize << "to " << newsize << std::endl;
+    T* temp = new T[newsize];
+	for(int i = 0; i < (arraySize>newsize ? newsize : arraySize) ; ++i){
 		temp[i]=arr[i];
 	}
 	arraySize = newsize;
