@@ -25,7 +25,6 @@ template<class T>
 void queue<T>::push(T& item){
         Node* temp = tail;
         tail = new Node(item);
-        temp->next = tail;
         if(isEmpty()) { head = tail;}
         else { temp->next = tail; }
         N++;
