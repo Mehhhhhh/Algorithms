@@ -5,7 +5,7 @@
 
 void test_llstack(){
         std::cout << "testing linked list stack" << std::endl;
-	llstack<int>* stack = new llstack<int>();
+	stack<int>* stack = new llstack<int>();
         for(int i = 0 ; i < 10 ; ++i){
                 stack->push(i);
         }
@@ -17,7 +17,7 @@ void test_llstack(){
 
 void test_arraystack(){
         std::cout << "testing resizing array stack" << std::endl;
-	arraystack<int>* stack = new arraystack<int>();
+	stack<int>* stack = new arraystack<int>();
         for(int i = 0 ; i < 10 ; ++i){
 		std::cout << "pushing " << i << " in stack"<< std::endl;
                 stack->push(i);

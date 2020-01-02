@@ -3,16 +3,15 @@
 
 #define MIN_CAPACITY 1
 
-template<class T> class arraystack{
+#include "include/stack.hpp"
+
+template<class T> class arraystack : public stack<T> {
 	public:
 		arraystack();
-		void push(T& t);
-                bool isEmpty() const;
-                int size() const;
-                T pop();
-		~arraystack();
+		void push(T& t) override;
+        T pop() override;
+		~arraystack() override;
 	private:
-		int N;
 		int arraySize;
 		T* arr;
 		void resize(int newsize);

@@ -1,7 +1,8 @@
 #include <iostream>
+
 template<class T>
-arraystack<T>::arraystack(){
-	N = 0;
+arraystack<T>::arraystack() {
+	this->N = 0;
 	arraySize = MIN_CAPACITY;
 	arr = new T[arraySize];
 }
@@ -19,25 +20,15 @@ void arraystack<T>::resize(int newsize){
 }
 
 template<class T>
-int arraystack<T>::size() const{
-	return N;
-}
-
-template<class T>
-bool arraystack<T>::isEmpty() const{
-	return N==0;
-}
-
-template<class T>
 void arraystack<T>::push(T& item){
-	if(N==arraySize) resize(2*arraySize);
-	arr[N++] = item;
+	if(this->N==arraySize) resize(2*arraySize);
+	arr[(this->N)++] = item;
 }
 
 template<class T>
 T arraystack<T>::pop(){
-	T item = arr[--N];
-	if(N > 0 && N == arraySize/4) resize(arraySize/2);
+	T item = arr[--this->N];
+	if(this->N > 0 && this->N == arraySize/4) resize(arraySize/2);
 	return item;
 }
 
