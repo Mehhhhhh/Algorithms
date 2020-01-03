@@ -1,0 +1,6 @@
+#!/bin/bash
+
+CUR=$(dirname $(realpath $0))
+
+export CPATH=$CPATH:$CUR/containersImpl/include
+export CPATH=$CPATH:$CUR/sortingImpl/include
