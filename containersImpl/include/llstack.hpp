@@ -1,14 +1,14 @@
 #ifndef LLSTACK_HPP
 #define LLSTACK_HPP
 
-template <class T> class llstack{
+#include "include/stack.hpp"
+
+template <class T> class llstack : public stack<T> {
 	public:
 		llstack();
-		void push(T& t);
-		bool isEmpty();
-		int size();
-		T& pop();
-		~llstack();
+		void push(T& t) override;
+		T pop() override;
+		~llstack() override;
 	private:
 		class Node {
 		    public:
@@ -18,8 +18,6 @@ template <class T> class llstack{
 		};
 		// top of the stack
 		Node* first;
-		//number of items
-		int N;
 };
 
 #include "template/llstack.tpp"
